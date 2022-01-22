@@ -4,7 +4,7 @@ const todosUL = document.getElementById('todos')
 
 const todos = JSON.parse(localStorage.getItem('todos'))
 
-if(todos) {
+if (todos) {
     todos.forEach(todo => addTodo(todo))
 }
 
@@ -17,13 +17,13 @@ form.addEventListener('submit', (e) => {
 function addTodo(todo) {
     let todoText = input.value
 
-    if(todo) {
+    if (todo) {
         todoText = todo.text
     }
 
-    if(todoText) {
+    if (todoText) {
         const todoEl = document.createElement('li')
-        if(todo && todo.completed) {
+        if (todo && todo.completed) {
             todoEl.classList.add('completed')
         }
 
@@ -32,14 +32,14 @@ function addTodo(todo) {
         todoEl.addEventListener('click', () => {
             todoEl.classList.toggle('completed')
             updateLS()
-        }) 
+        })
 
         todoEl.addEventListener('contextmenu', (e) => {
             e.preventDefault()
 
             todoEl.remove()
             updateLS()
-        }) 
+        })
 
         todosUL.appendChild(todoEl)
 
@@ -62,4 +62,43 @@ function updateLS() {
     })
 
     localStorage.setItem('todos', JSON.stringify(todos))
+}
+const header = document.querySelector('.nav');
+window.addEventListener('scroll', scrollFunction);
+
+function scrollFunction() {
+    if (window.scrollY > header.offsetHeight + 55) {
+        header.classList.add("active")
+    } else {
+        header.classList.remove("active")
+    }
+
+}
+
+var like = document.querySelector("#like");
+var dislike = document.querySelector("#dislike");
+var likeDislike = document.getElementsByClassName("fa");
+
+var likes = document.querySelector("#icons");
+var feed = document.querySelector("#feed")
+var thankYou = document.querySelector("#thankyou")
+
+var yes = document.querySelector("#yes");
+var no = document.querySelector("#no")
+
+window.addEventListener("click", hideLike);
+likeDislike.addEventListener("hover", yesOrNo);
+
+function yesOrNo() {
+    if (like) {
+        yes.style.display = "block";
+    } else if (dislike) {
+        no.style.display = "block"
+    } else { "" }
+}
+
+function hideLike() {
+    likes.style.display = "none";
+    feed.style.display = "none";
+    thankYou.style.display = "block";
 }

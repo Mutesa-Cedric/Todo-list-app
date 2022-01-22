@@ -5,21 +5,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/71bb9301a0.js" crossorigin="anonymous"></script>
     <title>Todo List</title>
 </head>
+<header class="nav">
+    <div class="hcontainer">
+        <h2>todo</h2>
+        <ul>
+            <a href="#" class="home">home
+                </a>
+            <a href="#howto">how to
+                </a>
+            <a href="#contacts">contacts
+                </a>
+        </ul>
+    </div>
+</header>
 
 <body>
-    <h1>todos</h1>
-    <form id="form">
-        <input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
+    <div id="home">
+        <h1>todos</h1>
+        <form id="form">
+            <input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
 
-        <ul class="todos" id="todos"></ul>
-    </form>
-    <small>Left click to toggle completed. <br> Right click to delete todo</small>
-    <footer>
-        copyright &copy; 2022 Mutesa cedric.All rights reserved.
-    </footer>
+            <ol class="todos" id="todos">
+            </ol>
+        </form>
+        <small>Left click to toggle completed. <br> Right click to delete todo</small>
+    </div>
+    <div id="howto" class="howtocontainer">
+        <div class="items item1">
+            <h2>how to</h2>
+            <menu>
+                <p> 1.input your activities in provided space <br> 2.arrange them in order you need them to be done <br> 3.you can disactivate completed task by <strong>let click</strong><br> 4.if you need to delete a task, <strong>right click on it</strong><br></p>
+            </menu>
+            <div class="feedback">
+                <h2 id="feed">was this helpful?</h2>
+                <div id="icons">
+                    <div id="like"><i class="fa fa-thumbs-up"></i></div>
+                    <p class="yes-no" id="yes">Yes</p>
+                    <div id="dislike"><i class="fa fa-thumbs-down"></i></div>
+                    <p class="yes-no" id="no">No</p>
+                </div>
+                <h2 id="thankyou">thank you for your feedback!</h2>
+            </div>
+        </div>
+        <div class="items item2">
+            <h2>why TODO?</h2>
+            <menu></menu>
+        </div>
+    </div>
+
+    <div id="contacts" class="contcontainer">
+        <div class="citem citem1">
+            <h2>Developer info</h2>
+            <p>this app was fully developed by Mutesa Cedric who is currently studying at Rwanda coding academy.
+            </p>
+            <h3>stay in touch<i class="fas fa-angle-down"></i></h3>
+            <div class="icons">
+                <i class="fab fa-linkedin"><a href="https://www.linkedin.com/in/mutesa-cedric/"></a></i>
+                <i class="fab fa-github-square"><a href="https://github.com/Mutesa-Cedric/"></a></i>
+                <i class="fab fa-twitter-square"><a href="#"></a></i>
+                <i class="fab fa-instagram-square"><a href="https://www.instagram.com/mtx_cedric/"></a></i>
+            </div>
+
+        </div>
+        <div class="citem citem2">
+            <h3>
+                Contacts
+            </h3>
+            <div class="icons2">
+                <i class="fas fa-phone-square-alt"></i>(+250) 781809989
+                <i class="fas fa-envelope-square"></i>mutesacedric@gmail.com
+                <i class="fas fa-house-user"></i>byumba,gicumbi-Rwanda
+            </div>
+        </div>
+        <div class="citem citem3">
+            <h3>Quicklinks</h3>
+        </div>
+    </div>
+    <div id="copy">
+        <p>copyright &copy;2022 MUTESA Cedric.all rights resersed</p>
+    </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 
 </html>
